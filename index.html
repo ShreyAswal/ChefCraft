@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body id="body">
+    <div id="actualContainer"> 
+
+        <header id="headerSection">
+            <h1 id="name">ChefCraft</h1>
+            <p>Suggests the best dishes from all over the world<br>also provides you with ingredients to make them!</p>
+            <span id="searching">
+                <input type="text" id="textInput" placeholder="Search for a meal..." style="padding-left: 8px;">
+                <button type="button" id="submitButton"> Search</button>
+            </span>
+        </header> 
+
+        
+        <div id="recommendationSection">
+            <h2 id="recommendationHeading">Recommended dish for you!</h2>
+            <div id="recommendedMeal"></div> 
+        </div>
+
+        <div id="modal" >
+            <span id="exitCross">&times;</span>
+            <div id="modalImg"></div>
+            <div>
+                <ul id="ingredients">Ingredients</ul>
+                <!-- <div id="ingImgIngName "> -->
+
+                    <div id="eachIngredient"></div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <h3 id="searchedMealsFound">Here are the dishes you were looking for!</h3>     
+        <div id="searchedMeals"></div>
+        <h3 id="searchedMealsNotFound">Couldn't find the dish you were looking for.<br>Please try again ;)</h3>
+        
+
+        <footer id="footerSection">
+            <h3>Made with ❤ by Shrey Aswal</h3>
+        </footer>
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

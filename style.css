@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Average';
+    font-style: normal;
+    font-weight: 600;
+}
+
+body{
+    background-color:#FFA326;
+    /* filter: blur(5px); */
+
+}
+
+#actualContainer{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    margin:3% 4%;
+    height:88vh ;
+    width:88vw;
+    color:blanchedalmond;
+    border: 0.5em solid black;
+    border-radius: 1%;
+    overflow-y:auto;
+    overflow-x: hidden;
+}
+
+#headerSection{
+    position: relative;
+    height: 23vh;
+    width: 88vw;
+    background-color: rgb(0, 0, 0);
+    color: #FFA326;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2px;  
+}
+
+#name{
+    font-family: 'Average';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.5vmin;
+    line-height: 7vmin;
+    letter-spacing: 0.4em;
+    color: #FF9300;
+    margin-top: -3vh;  
+}
+
+p{
+    font-family: 'Averia Libre';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3vmin;
+    line-height: 3vmin;
+    text-align: center;
+    letter-spacing: 0.4vw;
+    color: white;
+    }
+
+#searching{
+    margin-top: 0.5em;
+
+}
+
+#recommendationSection{
+    margin-top: 1.5em;
+    position: relative;
+    height: auto;
+    width:88vw;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    gap: 1em; 
+    overflow:inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h4{
+    margin-top: 1em;
+}
+
+#footerSection{
+    position:relative;
+    height: 15vh;
+    width: 88vw;
+    background-color: rgb(0, 0, 0);
+    color: rgb(251, 164, 32);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    font-size: 2.5vmin;
+    transform: translate(0,21vh);
+}
+
+#recommendationHeading{
+    text-shadow: 2px 2px 6px #FFA326;
+    font-size: 4vmin;
+}
+
+#recommendedMeal{
+    padding:1.5em 2em 1.5em 2em;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#FFA326;
+    border-radius: 1.2em;
+    border: 5px solid #FFA326;
+    cursor: pointer;  
+}
+
+#recommendedMealImage:hover{
+    transform: scale(1.05);
+}
+
+.recommendedMealImage{
+    height: 10em;
+    width: 10em;
+    border: 2px solid white;
+    border-radius: 5px;   
+}
+
+#searchedMealsNotFound{
+    display: none;
+    color: black;
+    font-size: 4vmin;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#submitButton,#textInput{
+height: 2em;
+border-radius: 5px;
+    
+}
+
+#submitButton{
+    width:100px;
+    background-color:#FFA326;
+    height: 1.65em;
+    cursor: pointer;
+    font-family: 'Average';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.05em; 
+    transform:translate(-4px,3px)  
+}
+
+#submitButton:hover {
+    transform: scale(1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(231, 126, 5);
+    background-color: rgb(241, 123, 12);
+    color: rgb(246, 248, 247);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#searchedMeals{
+    /* height: auto;
+    width: auto; */
+    background-color: #3c7dff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+
+#searchedMealsFound{
+    display: none;
+    font-size: 4vmin;
+    color: #000000;
+    text-align: center;
+    margin: 1em;
+}
+
+.searchedMealImage{
+    height: 9em;
+    width: 9em;
+    border: 2px solid rgb(83, 83, 83);
+    border-radius: 5px;   
+}
+
+.eachSearchedMeal{
+    padding:0.3em 0.5em 0.5em 0.5em;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:#000000;
+    border-radius: 1.2em;
+    border: 5px solid #FFA326; 
+    height: auto;
+    width:min-content;
+    margin: 1em;
+    font-family: 'Average';
+    font-style: normal;
+    font-weight: 900;
+    box-shadow: 1px 1px 10px 0.1px;
+}
+
+/* .eachSearchedMeal:hover{
+    transform: scale(1.1);
+} */
+
+#modal{
+    display: none;
+    position: fixed;
+    background-color: yellow;
+    color: #000000;
+    height: auto;
+    width: auto;
+    justify-content:space-evenly;
+    flex-direction: row;
+    position: fixed;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid rgb(0, 0, 0);
+
+
+}
+
+#exitCross{
+    display: none;
+    font-size: 10vmin;
+    color: #000000;
+    cursor: pointer;
+    position:absolute;
+    top: -1%;
+    right: 1%;
+}
+
+#modalImg{
+    height: auto;
+    width: auto; 
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+#ingredients{
+    display: none;
+    flex-wrap: wrap;
+    font-size: 6vmin;
+    margin-right: 2em;
+    margin-top: 0.5em;
+    
+}
+
+#eachIngredient{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    font-size: 5vmin;
+}
+
+.RecommendedMealImg{
+    height:20vmin;
+    width:20vmin;
+    border: 4px solid rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+.ingredientImages{
+    height:10vmin;
+    width:10vmin;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+}
+
+#ingImgIngName{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow:scroll;
+}
+
+.flex{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#eachIngredient{
+    display: flex;
+    height: 40vh;
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+   overflow-x: hidden;
+}
